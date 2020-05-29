@@ -7,15 +7,16 @@ debug = []
 with open(f"{file}.txt", 'r') as read_file:
     firms, avg = {}, {}
     avg["average_profit"] = 0
+    c =1 
     for line in read_file.readlines():
         data = line.split()
-        avg["average_profit"] += int(data[2]) - int(data[3].split(".")[0])
         if int(data[2]) - int(data[3].split(".")[0]) >0:
             firms[data[0]] = int(data[2]) - int(data[3].split(".")[0])
+            avg["average_profit"] += int(data[2]) - int(data[3].split(".")[0])
+            c +=1
         else:pass
     if avg["average_profit"] >0:
-        read_file.seek(0)
-        avg["average_profit"] = avg["average_profit"]/len(read_file.readlines())
+        avg["average_profit"] = avg["average_profit"]/c
         debug.append(avg)
     else:
         saved = avg["average_profit"]
