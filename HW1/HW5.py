@@ -16,7 +16,7 @@ with open("text.txt", 'r') as f_obj:
     print(f"The file has {len(data)+1} lines")
     for line in data:
         print(f"line {data.index(line)+1} has {len(line.split())} word(s)")
-      
+ 
 #3
 #file = input("Enter filename")
 file = "sal"
@@ -25,12 +25,12 @@ with open(f"{file}.txt", 'r') as f_obj:
     data = f_obj.readlines()
     for line in data:
         name, salary = line.split()     
-        med_wages+=int(salary)
-        if int(salary) <20000:
+        med_wages+=float(salary)
+        if float(salary) <20000:
             print(name)
     med_wages = med_wages/len(data)
     print(med_wages)
-    
+
 #4
 file = "1234"
 conv = {1:"Один", 2: "Два", 3:"Три",
@@ -68,6 +68,7 @@ with open(f"{file}.txt", 'r') as read_file:
                 debug[key] += int(s.split("(")[0]) #добавляем значения к ключу
 print(debug)
 
+
 #7
 from json import dump
 #file = input("Enter filename")
@@ -76,15 +77,16 @@ debug = []
 with open(f"{file}.txt", 'r') as read_file:
     firms, avg = {}, {}
     avg["average_profit"] = 0
+    c =1 
     for line in read_file.readlines():
         data = line.split()
-        avg["average_profit"] += int(data[2]) - int(data[3].split(".")[0])
         if int(data[2]) - int(data[3].split(".")[0]) >0:
             firms[data[0]] = int(data[2]) - int(data[3].split(".")[0])
+            avg["average_profit"] += int(data[2]) - int(data[3].split(".")[0])
+            c +=1
         else:pass
     if avg["average_profit"] >0:
-        read_file.seek(0)
-        avg["average_profit"] = avg["average_profit"]/len(read_file.readlines())
+        avg["average_profit"] = avg["average_profit"]/c
         debug.append(avg)
     else:
         saved = avg["average_profit"]
