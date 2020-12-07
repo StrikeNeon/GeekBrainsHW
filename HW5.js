@@ -1,0 +1,350 @@
+
+function chessCreate() {
+	var letters = ["A","B","C","D","E","F","G","H"];
+	var pawns = ["П", "П", "П", "П", "П", "П", "П", "П"];
+	var full = ["Л", "К", "Ф", "Король", "королева", "Ф", "К", "Л"];
+
+  var body = document.getElementsByTagName('body')[0];
+  var tbl = document.createElement('table');
+  tbl.style.width = '100%';
+  tbl.setAttribute('border', '1');
+  var tbdy = document.createElement('tbody');
+  for (var i = 0; i < 8; i++) {
+    var tr = document.createElement('tr');
+    var tfull = full;
+    var tpawns = pawns
+    var td = document.createElement('td');
+	td.id = i+j;
+	td.appendChild(document.createTextNode(i+1))  
+    td.style.color = "black";
+    tr.appendChild(td)
+    for (var j = 0; j < 8; j++) {
+      switch (i) {
+      	case 0:
+	        var td = document.createElement('td');
+	        td.id = i+j;
+	        td.appendChild(document.createTextNode(letters[j]))  
+    		td.style.color = "black";  
+	        tr.appendChild(td)
+	        break;
+	    case 1:
+	        var td = document.createElement('td');
+	        td.id = i+j;
+	        td.appendChild(document.createTextNode(full[j]))
+    		td.style.color = "black"; 
+    		if (i % 2 ==0) {
+    		switch  (j) {
+    			case 0:
+				        td.style.backgroundColor = "black";   
+				        break;
+    			case 1:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 2:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 3:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 4:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 5:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 6:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 7:
+				        td.style.backgroundColor = "white";   
+				        break; 
+      				}
+      			}
+      		else{
+      			switch  (j) {
+      			case 0:
+				        td.style.backgroundColor = "white";   
+				        break;
+    			case 1:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 2:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 3:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 4:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 5:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 6:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 7:
+				        td.style.backgroundColor = "black";   
+				        break; 
+      				}
+      			}
+	        tr.appendChild(td)
+	        break;
+	    case 2:
+	        var td = document.createElement('td');
+	        td.id = i+j;
+	        td.appendChild(document.createTextNode(pawns[j]))
+	        td.style.color = "black"; 
+	        if (i % 2 ==0) {
+    		switch  (j) {
+    			case 0:
+				        td.style.backgroundColor = "black";   
+				        break;
+    			case 1:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 2:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 3:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 4:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 5:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 6:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 7:
+				        td.style.backgroundColor = "white";   
+				        break; 
+      				}
+      			}
+      		else{
+      			switch  (j) {
+      			case 0:
+				        td.style.backgroundColor = "white";   
+				        break;
+    			case 1:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 2:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 3:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 4:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 5:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 6:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 7:
+				        td.style.backgroundColor = "black";   
+				        break; 
+      				}
+      			}
+	        tr.appendChild(td)
+	        break;
+	    case 6:
+	        var td = document.createElement('td');
+	        td.id = i+j;
+	        td.appendChild(document.createTextNode(pawns[j]))
+	        td.style.color = "white"; 
+	        if (i % 2 ==0) {
+    		switch  (j) {
+    			case 0:
+				        td.style.backgroundColor = "black";   
+				        break;
+    			case 1:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 2:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 3:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 4:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 5:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 6:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 7:
+				        td.style.backgroundColor = "white";   
+				        break; 
+      				}
+      			}
+      		else{
+      			switch  (j) {
+      			case 0:
+				        td.style.backgroundColor = "white";   
+				        break;
+    			case 1:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 2:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 3:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 4:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 5:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 6:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 7:
+				        td.style.backgroundColor = "black";   
+				        break; 
+      				}
+      			}
+	        tr.appendChild(td)
+	        break;
+	    case 7:
+	        var td = document.createElement('td');
+	        td.id = i+j;
+	        td.appendChild(document.createTextNode(full[j]));
+	        td.style.color = "white";  
+	        if (i % 2 ==0) {
+    		switch  (j) {
+    			case 0:
+				        td.style.backgroundColor = "black";   
+				        break;
+    			case 1:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 2:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 3:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 4:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 5:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 6:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 7:
+				        td.style.backgroundColor = "white";   
+				        break; 
+      				}
+      			}
+      		else{
+      			switch  (j) {
+      			case 0:
+				        td.style.backgroundColor = "white";   
+				        break;
+    			case 1:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 2:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 3:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 4:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 5:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 6:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 7:
+				        td.style.backgroundColor = "black";   
+				        break; 
+      				}
+      			}
+	        tr.appendChild(td);
+	        break;
+	    default:
+	    	var td = document.createElement('td');
+	    	td.id = i+j;
+	    	if (i % 2 ==0) {
+    		switch  (j) {
+    			case 0:
+				        td.style.backgroundColor = "black";   
+				        break;
+    			case 1:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 2:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 3:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 4:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 5:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 6:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 7:
+				        td.style.backgroundColor = "white";   
+				        break; 
+      				}
+      			}
+      		else{
+      			switch  (j) {
+      			case 0:
+				        td.style.backgroundColor = "white";   
+				        break;
+    			case 1:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 2:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 3:
+				        td.style.backgroundColor = "black";   
+				        break;
+				case 4:
+				        td.style.backgroundColor = "white";   
+				        break;  
+				case 5:
+				        td.style.backgroundColor = "black";   
+				        break;  
+				case 6:
+				        td.style.backgroundColor = "white";   
+				        break;
+				case 7:
+				        td.style.backgroundColor = "black";   
+				        break; 
+      				}
+      			}
+	        tr.appendChild(td);
+	        break;
+    }
+    tbdy.appendChild(tr);
+  }
+  tbl.appendChild(tbdy);
+  body.appendChild(tbl);
+}
+}
+chessCreate();
